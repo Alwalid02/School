@@ -53,7 +53,7 @@
                                     <constraint firstAttribute="height" constant="50" id="l0c-Ih-iSk"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="18"/>
-                                <state key="normal" title="Login">
+                                <state key="normal" title="تسجيل">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <userDefinedRuntimeAttributes>
@@ -63,6 +63,7 @@
                                 </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="loginButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="kDh-jg-YWQ"/>
+                                    <segue destination="C8f-kc-TFV" kind="show" id="aVW-JX-ieD"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -88,23 +89,142 @@
             </objects>
             <point key="canvasLocation" x="136.80000000000001" y="131.78410794602701"/>
         </scene>
-        <!--View Controller-->
+        <!--إضافات-->
         <scene sceneID="ks9-8X-iVD">
             <objects>
-                <viewController id="zOR-oF-WpM" sceneMemberID="viewController">
+                <viewController title="إضافات" id="zOR-oF-WpM" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="06g-Ss-qRr">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="uXj-CB-sXW">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                <items>
+                                    <navigationItem title="إضافات" id="1DO-d0-1O1"/>
+                                </items>
+                            </navigationBar>
+                            <textField opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="عنوان" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="lkQ-t3-0uc">
+                                <rect key="frame" x="30" y="260" width="315" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lIO-R4-PJj">
+                                <rect key="frame" x="67" y="85" width="240" height="128"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="ebp-8S-Mb8"/>
+                                </constraints>
+                            </imageView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="veL-1k-YE3">
+                                <rect key="frame" x="30" y="317" width="315" height="128"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="280" id="acv-5V-UQC"/>
+                                </constraints>
+                                <mutableString key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</mutableString>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vuy-jj-PRo">
+                                <rect key="frame" x="40" y="492" width="295" height="50"/>
+                                <color key="backgroundColor" red="0.090773127970000006" green="0.55469632150000003" blue="0.51098662610000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="8IV-qS-Sk3"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="18"/>
+                                <state key="normal" title="تسجيل">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.corner.radiur">
+                                        <integer key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="loginButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="lsB-kl-Sw4"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="lkQ-t3-0uc" firstAttribute="leading" secondItem="O9V-2S-38M" secondAttribute="leading" constant="30" id="QbH-nI-slY"/>
+                            <constraint firstItem="veL-1k-YE3" firstAttribute="top" secondItem="lkQ-t3-0uc" secondAttribute="bottom" constant="16" id="SwQ-6B-eOU"/>
+                            <constraint firstItem="vuy-jj-PRo" firstAttribute="leading" secondItem="O9V-2S-38M" secondAttribute="leading" constant="40" id="TEn-5h-cow"/>
+                            <constraint firstItem="lIO-R4-PJj" firstAttribute="top" secondItem="uXj-CB-sXW" secondAttribute="bottom" constant="40" id="byJ-FZ-FQ2"/>
+                            <constraint firstItem="lkQ-t3-0uc" firstAttribute="top" secondItem="lIO-R4-PJj" secondAttribute="bottom" constant="20" id="hCx-uX-T4U"/>
+                            <constraint firstItem="vuy-jj-PRo" firstAttribute="top" secondItem="veL-1k-YE3" secondAttribute="bottom" constant="20" id="kkb-g7-Ej2"/>
+                            <constraint firstItem="O9V-2S-38M" firstAttribute="trailing" secondItem="lkQ-t3-0uc" secondAttribute="trailing" constant="30" id="ksc-uO-T0M"/>
+                            <constraint firstItem="O9V-2S-38M" firstAttribute="trailing" secondItem="veL-1k-YE3" secondAttribute="trailing" constant="30" id="l8c-qk-PSm"/>
+                            <constraint firstItem="veL-1k-YE3" firstAttribute="leading" secondItem="O9V-2S-38M" secondAttribute="leading" constant="30" id="nCE-Dy-HoY"/>
+                            <constraint firstItem="O9V-2S-38M" firstAttribute="trailing" secondItem="vuy-jj-PRo" secondAttribute="trailing" constant="40" id="wo6-cS-OaA"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="O9V-2S-38M"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GJQ-qa-v47" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="889" y="138"/>
+            <point key="canvasLocation" x="2383" y="131"/>
+        </scene>
+        <!--الرئيسية-->
+        <scene sceneID="wXV-a1-7bU">
+            <objects>
+                <viewController title="الرئيسية" id="C8f-kc-TFV" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Xhj-ro-JZ1">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ugq-BK-kAD">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <items>
+                                    <navigationItem title="الرئيسية" id="MHe-FO-3aO"/>
+                                </items>
+                            </navigationBar>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rsX-IN-aky">
+                                <rect key="frame" x="164" y="318" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <segue destination="zOR-oF-WpM" kind="show" id="VBJ-je-KN4"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <viewLayoutGuide key="safeArea" id="PBI-2v-B6b"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="الرئيسية" id="XIR-pk-4Ls"/>
+                    <connections>
+                        <segue destination="zOR-oF-WpM" kind="show" id="aKG-F3-XrZ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3Vq-oZ-aQq" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1628" y="131"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="jnD-7f-Xpq">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="hcX-5b-zlf" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="fdq-4i-TuV">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="C8f-kc-TFV" kind="relationship" relationship="rootViewController" id="6fX-Ue-5Ql"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0kS-8a-H0w" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1628" y="-660"/>
         </scene>
     </scenes>
     <resources>
         <image name="MOELogo" width="1645" height="881"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="6fX-Ue-5Ql"/>
+        <segue reference="aKG-F3-XrZ"/>
+    </inferredMetricsTieBreakers>
 </document>
